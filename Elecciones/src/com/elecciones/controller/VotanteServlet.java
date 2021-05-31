@@ -90,10 +90,10 @@ public class VotanteServlet extends HttpServlet {
 
 	private void insert(HttpServletRequest request, HttpServletResponse response) throws ServletException, SQLException, IOException {
 
+		int tipodocumento = Integer.parseInt(request.getParameter("tipodocumento"));
+		String documento = request.getParameter("documento");
 		String nombre = request.getParameter("nombre");
 		String email = request.getParameter("email");
-		String documento = request.getParameter("documento");
-		int tipodocumento = Integer.parseInt(request.getParameter("tipodocumento"));
 		int eleccion = Integer.parseInt(request.getParameter("eleccion"));
 
 		Votante votante = new Votante(nombre, email, documento, tipodocumento, eleccion);

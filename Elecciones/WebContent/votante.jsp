@@ -83,7 +83,7 @@
 				<fieldset class="form-group">
 					<label>Nombre del Votante</label> <input type="text"
 						value="<c:out value='${Votante.nombre}' />" class="form-control"
-						name="name" required="required">
+						name="nombre" required="required">
 				</fieldset>
 				
 				<fieldset class="form-group">
