@@ -14,14 +14,15 @@ import lombok.NoArgsConstructor;
 public class Estamento implements Serializable {
 
 	private int id;
-	private String descripcion;
 	private int eleccion;
+	private String descripcion;
 	
 	
-	public Estamento(String descripcion, int eleccion) {
+	public Estamento( int eleccion, String descripcion) {
 		super();
-		this.descripcion = descripcion;
 		this.eleccion = eleccion;
+		this.descripcion = descripcion;
+		
 	}
 	
 
