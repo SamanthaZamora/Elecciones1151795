@@ -112,8 +112,8 @@ public class VotanteServlet extends HttpServlet {
 		List<Estamento> e = newEstamento.selectAll();
 		request.setAttribute("estamento", e);
 		
-		List<TipoDocumento> tipo = newTipo.selectAll();
-		request.setAttribute("tipoDocumento", tipo);
+		List<TipoDocumento> tipodocumento= newTipo.selectAll();
+		request.setAttribute("tipoDocumento", tipodocumento);
 		
 		List<Eleccion> elec = newEleccion.selectAll();
 		request.setAttribute("eleccion", elec);

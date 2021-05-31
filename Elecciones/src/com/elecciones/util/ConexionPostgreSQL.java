@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 
 public class ConexionPostgreSQL implements Conexion {
 
@@ -80,7 +81,7 @@ public class ConexionPostgreSQL implements Conexion {
 		}
 	}
 
-	/*public ResultSet consultar(String sql) {
+	public ResultSet consultar(String sql) {
 
 		try {
 			Statement st = this.con.createStatement();
@@ -98,14 +99,15 @@ public class ConexionPostgreSQL implements Conexion {
 	public static void main(String[] args) {
 		ConexionPostgreSQL cp = new ConexionPostgreSQL();
 
-		ResultSet r = cp.consultar("Select * from candidato");
+		ResultSet r = cp.consultar("Select * from eleccion");
 		try {
 			while (r.next()) {
 				int id = r.getInt(1);
-				String documento = r.getString("documento");
 				String nombre = r.getString("nombre");
-				String apellido = r.getString("apellido");
-				System.out.print("\n" + id + "documento" +documento+ " Nombre:" + nombre + "apellido"+ apellido);
+				Date fechainicio = r.getDate("fechainicio");
+				Date fechafin = r.getDate("fechafin");
+				String cargo = r.getString("cargo");
+				System.out.print("\n" + id + "nombre" +nombre);
 			}
 
 		} catch (SQLException e) {
@@ -113,5 +115,6 @@ public class ConexionPostgreSQL implements Conexion {
 		}
 
 		cp.cerrarConexion();
-	}*/
+	}
+
 }
