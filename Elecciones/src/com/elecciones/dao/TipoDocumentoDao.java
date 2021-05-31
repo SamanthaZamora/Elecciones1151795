@@ -30,7 +30,8 @@ public class TipoDocumentoDao implements GenericDao<TipoDocumento>{
 		try {
 			PreparedStatement preparedStatement = conexion.setPreparedStatement(INSERT_TIPO_SQL);
 			preparedStatement.setString(1, tipo.getDescripcion());
-
+			
+			
 			System.out.println(preparedStatement);
 			conexion.execute();
 		} catch (SQLException e) {
@@ -55,6 +56,7 @@ public class TipoDocumentoDao implements GenericDao<TipoDocumento>{
 		try {
 			PreparedStatement preparedStatement = conexion.setPreparedStatement(UPDATE_TIPO_SQL);
 			preparedStatement.setString(1, tipo.getDescripcion());
+			preparedStatement.setInt(2, tipo.getId());
 
 			conexion.execute();
 		} catch (SQLException e) {

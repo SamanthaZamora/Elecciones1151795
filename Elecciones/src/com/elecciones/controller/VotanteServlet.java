@@ -76,8 +76,8 @@ public class VotanteServlet extends HttpServlet {
 	private void showNewForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("votante.jsp");
 
-		/*List<Estamento> e = newEstamento.selectAll();
-		request.setAttribute("e", e);*/
+		List<Estamento> e = newEstamento.selectAll();
+		request.setAttribute("e", e);
 		
 		List<TipoDocumento> tipo = newTipo.selectAll();
 		request.setAttribute("tipo", tipo);
