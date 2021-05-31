@@ -77,13 +77,13 @@ public class VotanteServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("votante.jsp");
 
 		List<Estamento> e = newEstamento.selectAll();
-		request.setAttribute("estamento", e);
+		request.setAttribute("e", e);
 		
 		List<TipoDocumento> tipo = newTipo.selectAll();
-		request.setAttribute("tipoDocumento", tipo);
+		request.setAttribute("tipo", tipo);
 		
 		List<Eleccion> elec = newEleccion.selectAll();
-		request.setAttribute("eleccion", elec);
+		request.setAttribute("elec", elec);
 		
 		dispatcher.forward(request, response);
 	}

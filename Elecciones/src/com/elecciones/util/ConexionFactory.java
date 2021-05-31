@@ -2,7 +2,7 @@ package com.elecciones.util;
 
 public class ConexionFactory {
 
-	static String tipo = "postgresql";
+	static String tipo = "mysql";
 
 	public static Conexion getConexion() {
 		if (tipo.contentEquals("postgresql")) {
