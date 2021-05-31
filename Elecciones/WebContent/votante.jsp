@@ -75,23 +75,36 @@
 				</fieldset>
 				
 				<fieldset class="form-group">
-					<label>Nombre del Equipo</label> <input type="text"
-						value="<c:out value='${Team.name}' />" class="form-control"
+					<label>Documento</label> <input type="text"
+						value="<c:out value='${Votante.documento}' />" class="form-control"
+						name="documento" required="required">
+				</fieldset>
+				
+				<fieldset class="form-group">
+					<label>Nombre del Votante</label> <input type="text"
+						value="<c:out value='${Votante.nombre}' />" class="form-control"
 						name="name" required="required">
 				</fieldset>
+				
+				<fieldset class="form-group">
+					<label>Email</label> <input type="email"
+						value="<c:out value='${Votante.email}' />" class="form-control"
+						name="email" required="required">
+				</fieldset>
+
 
 				<fieldset class="form-group">
-					<label>País al que pertenece el equipo</label> 
+					<label>Proceso</label> 
 					<br> 
-					<select	name="country" class="rounded form-control">
-						<c:forEach var="country" items="${country}">
-							<option value="${country.id}">${country.name }</option>
+					<select	name="eleccion" class="rounded form-control">
+						<c:forEach var="eleccion" items="${eleccion}">
+							<option value="${eleccion.id}">${tipodocumento.cargo }</option>
 						</c:forEach>
 					</select>
 				</fieldset>
 
 				<br>
-				<button type="submit" class="btn" style="background-color: #ff286e">Guardar</button>
+				<button type="submit" class="btn" style="background-color: red">Guardar</button>
 				</form>
 			</div>
 		</div>
