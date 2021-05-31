@@ -67,9 +67,9 @@
 				<fieldset class="form-group">
 					<label>Tipo de Documento</label> 
 					<br> 
-					<select	name="tipo" class="rounded form-control">
-						<c:forEach var="tipo" items="${tipodocumento}">
-							<option value="${tipodocumento.id}">${tipodocumento.descripcion }</option>
+					<select	name="tipodocumento" class="rounded form-control">
+						<c:forEach var="tipodocumento" items="${tipodocumento}">
+							<option value="${tipodocumento.id}">${tipodocumento.descripcion}</option>
 						</c:forEach>
 					</select>
 				</fieldset>
@@ -98,7 +98,7 @@
 					<br> 
 					<select	name="eleccion" class="rounded form-control">
 						<c:forEach var="eleccion" items="${eleccion}">
-							<option value="${eleccion.id}">${tipodocumento.cargo }</option>
+							<option value="${eleccion.id}">${eleccion.nombre}</option>
 						</c:forEach>
 					</select>
 				</fieldset>

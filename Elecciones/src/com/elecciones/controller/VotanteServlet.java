@@ -39,7 +39,7 @@ public class VotanteServlet extends HttpServlet {
 		this.newvotante = new VotanteDao();
 		this.newEstamento = new EstamentoDao();
 		this.newTipo = new TipoDocumentoDao();
-		this.newEstamento = new EleccionDao();
+		this.newEleccion = new EleccionDao();
 	}
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -76,8 +76,8 @@ public class VotanteServlet extends HttpServlet {
 	private void showNewForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("votante.jsp");
 
-		List<Estamento> e = newEstamento.selectAll();
-		request.setAttribute("e", e);
+		/*List<Estamento> e = newEstamento.selectAll();
+		request.setAttribute("e", e);*/
 		
 		List<TipoDocumento> tipo = newTipo.selectAll();
 		request.setAttribute("tipo", tipo);
