@@ -26,4 +26,5 @@ public class Eleccion implements Serializable {
 		this.fechafin = fechafin;
 		this.cargo = cargo;
 	}
+
 }
